@@ -5,7 +5,7 @@ buildscript {
     repositories {
         google()
         mavenCentral()
-          maven { url = uri("https://www.jitpack.io" ) }
+			maven { url 'https://jitpack.io' }
     }
 
     dependencies {
@@ -17,7 +17,7 @@ rootProject.allprojects {
     repositories {
         google()
         mavenCentral()
-        maven { url = uri("https://www.jitpack.io" ) }
+			maven { url 'https://jitpack.io' }
     }
 }
 
@@ -38,6 +38,6 @@ android {
     }
 
     dependencies {
-        implementation 'com.github.arsalansasa:CustomTabsLauncher:develop-SNAPSHOT'
+        api 'com.github.arsalansasa:CustomTabsLauncher:1.6.0'
     }
 }
