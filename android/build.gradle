@@ -37,6 +37,6 @@ android {
     }
 
     dependencies {
-        api 'https://github.com/arsalansasa/CustomTabsLauncher.git'
+        api 'com.github.arsalansasa:CustomTabsLauncher:develop-SNAPSHOT'
     }
 }
