@@ -38,6 +38,7 @@ android {
     }
 
     dependencies {
-        api 'com.github.arsalansasa:CustomTabsLauncher:1.6.1'
+        api 'com.github.arsalansasa:CustomTabsLauncher:1.6.3'
+
     }
 }
