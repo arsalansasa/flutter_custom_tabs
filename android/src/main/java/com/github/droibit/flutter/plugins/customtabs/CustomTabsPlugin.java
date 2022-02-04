@@ -93,8 +93,8 @@ public class CustomTabsPlugin implements FlutterPlugin, ActivityAware, MethodCal
             final CustomTabsIntent customTabsIntent = factory.createIntent(options);
             final Uri uri = Uri.parse(args.get(KEY_URL).toString());
             final CustomTabsFallback fallback = factory.createFallback(options);
-            CustomTabsLauncher.launch(activity, customTabsIntent, uri, fallback);
-            result.success(null);
+            String res = CustomTabsLauncher.launch(activity, customTabsIntent, uri, fallback);
+            result.success(res);
         } catch (ActivityNotFoundException e) {
             result.error(CODE_LAUNCH_ERROR, e.getMessage(), null);
         }

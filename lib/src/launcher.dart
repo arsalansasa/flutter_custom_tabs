@@ -39,7 +39,7 @@ import 'package:flutter_custom_tabs_platform_interface/flutter_custom_tabs_platf
 ///   ),
 /// );
 /// ```
-Future<void> launch(String urlString,
+Future<String> launch(String urlString,
     {CustomTabsOption? customTabsOption,
     SafariViewControllerOption? safariVCOption}) async {
   final url = Uri.parse(urlString.trimLeft());
@@ -62,8 +62,10 @@ Future<void> launch(String urlString,
       statusBarBrightness = safariVCOption.statusBarBrightness;
     }
     _applyStatusBarBrightnessTemporally(statusBarBrightness, action: launch);
+    return '';
   } else {
-    await launch();
+    var res = await launch();
+    return res;
   }
 }
 

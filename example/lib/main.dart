@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_custom_tabs/flutter_custom_tabs.dart';
@@ -40,7 +42,7 @@ class MyApp extends StatelessWidget {
   Future<void> _launchURL(BuildContext context) async {
     final theme = Theme.of(context);
     try {
-      await launch(
+      var res = await launch(
         'https://flutter.dev',
         customTabsOption: CustomTabsOption(
           toolbarColor: theme.primaryColor,
